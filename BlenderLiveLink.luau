@@ -75,7 +75,7 @@ function MsgPack.decode(bytes)
         local exp = ((b[1] % 128) * 16) + math.floor(b[2] / 16)
         local mant = (b[2] % 16) * 2 ^ 48
         mant = mant + b[3] * 2 ^ 40 + b[4] * 2 ^ 32 + b[5] * 2 ^ 24
-             + b[6] * 2 ^ 16 + b[7] * 2 ^ 8 + b[8]
+            + b[6] * 2 ^ 16 + b[7] * 2 ^ 8 + b[8]
         if exp == 0 then
             return sign * mant * 2 ^ (-1074)
         end
@@ -676,7 +676,7 @@ local toolbar = plugin:CreateToolbar("Blender Live Link")
 local toggleButton = toolbar:CreateButton(
     "ToggleSync",
     "Start/stop polling the local bridge server for mesh updates",
-    ""
+    "rbxassetid://83584771094221"
 )
 toggleButton.ClickableWhenViewportHidden = true
 
