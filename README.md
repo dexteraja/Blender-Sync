@@ -24,7 +24,7 @@ A comprehensive, step-by-step guide to installing and configuring BlenderSync ac
 
 ### 1. Repository Setup
 
-* Extract the downloaded source archive (.rar).
+* Extract the downloaded source archive (.zip).
 * Open a terminal instance and navigate to the project root directory:
   ```
   cd blendersync
