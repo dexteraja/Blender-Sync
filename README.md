@@ -1,6 +1,17 @@
 # Blender-Sync
 Made By Love
 
+> Real-time mesh sync from Blender straight into Roblox Studio — model, save, and watch it update live in-game.
+
+BlenderSync is a bridge between Blender and Roblox Studio that keeps a `MeshPart` in your Roblox place in sync with a mesh object in your `.blend` file, without any manual export/import round trip. It's made up of three small pieces working together:
+
+* **A Blender add-on** (`live_link_sync.py`) that reads your mesh — vertices, split normals, UVs, vertex colors, deletions — and pushes it to a local server whenever you sync manually or via auto-sync.
+* **A lightweight local server** (`server.py`) that holds the latest state of each synced object in memory and answers polls from Roblox.
+* **A Roblox Studio plugin** (`BlenderLiveLink.lua`) that polls the server and builds/updates the corresponding `MeshPart`, including collision, so what you see in Blender is what you get in Studio — usually within a second.
+
+Useful for iterating on level geometry, props, or vehicle meshes without leaving Blender, or for teams who want a faster art-to-engine loop than manual `.fbx`/`.obj` exports.
+
+
 # BlenderSync Setup Guide
 
 A comprehensive, step-by-step guide to installing and configuring BlenderSync across your local environment, Blender, and Roblox Studio.
